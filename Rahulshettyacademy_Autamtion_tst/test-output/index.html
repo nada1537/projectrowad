@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\LENOVO\Desktop\men7a_project\Rahulshettyacademy_Autamtion_tst\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods, 2 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AddToCart.TestSuite_1" class="method navigator-link" hash-for-method="cart_continue_shopping_button">cart_continue_shopping_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AddToCart.TestSuite_1" class="method navigator-link" hash-for-method="cart_remove_button">cart_remove_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AddToCart.TestSuite_1" class="method navigator-link" hash-for-method="AddingItems_to_cart_successfully">AddingItems_to_cart_successfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AddToCart.TestSuite_1" class="method navigator-link" hash-for-method="AddingOneItem_to_cart_successfully">AddingOneItem_to_cart_successfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AddToCart.TestSuite_1" class="method navigator-link" hash-for-method="Inventory_remove_button">Inventory_remove_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_4" class="method navigator-link" hash-for-method="Login_with_correct_credentials">Login_with_correct_credentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_3" class="method navigator-link" hash-for-method="Login_with_wrong_credentials">Login_with_wrong_credentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_3" class="method navigator-link" hash-for-method="Login_with_wrong_credentials_close_button">Login_with_wrong_credentials_close_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_1" class="method navigator-link" hash-for-method="Login_without_credentials">Login_without_credentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_1" class="method navigator-link" hash-for-method="Login_without_credentials_close_button">Login_without_credentials_close_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_2" class="method navigator-link" hash-for-method="Login_without_password">Login_without_password</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_2" class="method navigator-link" hash-for-method="Login_without_password_close_button">Login_without_password_close_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login.TestSuite_2" class="method navigator-link" hash-for-method="Login_without_username">Login_without_username</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_1" class="method navigator-link" hash-for-method="Navigate_AboutPage">Navigate_AboutPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_3" class="method navigator-link" hash-for-method="Navigate_Facebook">Navigate_Facebook</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_3" class="method navigator-link" hash-for-method="Navigate_LinkedIN">Navigate_LinkedIN</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_2" class="method navigator-link" hash-for-method="Navigate_LoginPage">Navigate_LoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_3" class="method navigator-link" hash-for-method="Navigate_Twitter">Navigate_Twitter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_1" class="method navigator-link" hash-for-method="Navigation_AllItems">Navigation_AllItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_1" class="method navigator-link" hash-for-method="Navigation_Close_button">Navigation_Close_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Navigation.TestSuite_1" class="method navigator-link" hash-for-method="Reset_App_State">Reset_App_State</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">AddToCart.TestSuite_1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cart_continue_shopping_button">
+                  </a> <!-- cart_continue_shopping_button -->
+                  <span class="method-name">cart_continue_shopping_button</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#user\-name&quot;}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4bd5790f523876de6ce8b13da2c6dc71, findElement {value=user-name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64570}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64570/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bd5790f523876de6ce8b13da2c6dc71
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at AddToCart.TestSuite_1.cart_continue_shopping_button(TestSuite_1.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="cart_remove_button">
+                  </a> <!-- cart_remove_button -->
+                  <span class="method-name">cart_remove_button</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e89b054ffe9465a26568e5635dc99ce, findElement {value=user-name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64743/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e89b054ffe9465a26568e5635dc99ce
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at AddToCart.TestSuite_1.cart_remove_button(TestSuite_1.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Login.TestSuite_1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_without_credentials">
+                  </a> <!-- Login_without_credentials -->
+                  <span class="method-name">Login_without_credentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_without_credentials_close_button">
+                  </a> <!-- Login_without_credentials_close_button -->
+                  <span class="method-name">Login_without_credentials_close_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Login.TestSuite_4</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_with_correct_credentials">
+                  </a> <!-- Login_with_correct_credentials -->
+                  <span class="method-name">Login_with_correct_credentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Login.TestSuite_3</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_with_wrong_credentials">
+                  </a> <!-- Login_with_wrong_credentials -->
+                  <span class="method-name">Login_with_wrong_credentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_with_wrong_credentials_close_button">
+                  </a> <!-- Login_with_wrong_credentials_close_button -->
+                  <span class="method-name">Login_with_wrong_credentials_close_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">AddToCart.TestSuite_1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingItems_to_cart_successfully">
+                  </a> <!-- AddingItems_to_cart_successfully -->
+                  <span class="method-name">AddingItems_to_cart_successfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingOneItem_to_cart_successfully">
+                  </a> <!-- AddingOneItem_to_cart_successfully -->
+                  <span class="method-name">AddingOneItem_to_cart_successfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Inventory_remove_button">
+                  </a> <!-- Inventory_remove_button -->
+                  <span class="method-name">Inventory_remove_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Navigation.TestSuite_2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigate_LoginPage">
+                  </a> <!-- Navigate_LoginPage -->
+                  <span class="method-name">Navigate_LoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Login.TestSuite_2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_without_password">
+                  </a> <!-- Login_without_password -->
+                  <span class="method-name">Login_without_password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_without_password_close_button">
+                  </a> <!-- Login_without_password_close_button -->
+                  <span class="method-name">Login_without_password_close_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_without_username">
+                  </a> <!-- Login_without_username -->
+                  <span class="method-name">Login_without_username</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Navigation.TestSuite_1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigate_AboutPage">
+                  </a> <!-- Navigate_AboutPage -->
+                  <span class="method-name">Navigate_AboutPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigation_AllItems">
+                  </a> <!-- Navigation_AllItems -->
+                  <span class="method-name">Navigation_AllItems</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigation_Close_button">
+                  </a> <!-- Navigation_Close_button -->
+                  <span class="method-name">Navigation_Close_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Reset_App_State">
+                  </a> <!-- Reset_App_State -->
+                  <span class="method-name">Reset_App_State</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Navigation.TestSuite_3</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigate_Facebook">
+                  </a> <!-- Navigate_Facebook -->
+                  <span class="method-name">Navigate_Facebook</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigate_LinkedIN">
+                  </a> <!-- Navigate_LinkedIN -->
+                  <span class="method-name">Navigate_LinkedIN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Navigate_Twitter">
+                  </a> <!-- Navigate_Twitter -->
+                  <span class="method-name">Navigate_Twitter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\LENOVO\Desktop\men7a_project\Rahulshettyacademy_Autamtion_tst\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Login.TestSuite_3&quot;/&gt;
+      &lt;class name=&quot;Login.TestSuite_2&quot;/&gt;
+      &lt;class name=&quot;Login.TestSuite_1&quot;/&gt;
+      &lt;class name=&quot;Navigation.TestSuite_3&quot;/&gt;
+      &lt;class name=&quot;Navigation.TestSuite_1&quot;/&gt;
+      &lt;class name=&quot;Navigation.TestSuite_2&quot;/&gt;
+      &lt;class name=&quot;AddToCart.TestSuite_1&quot;/&gt;
+      &lt;class name=&quot;Login.TestSuite_4&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (8 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Navigate_AboutPage')
+data.setCell(0, 2, 'Navigation.TestSuite_1')
+data.setCell(0, 3, 58889);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'cart_continue_shopping_button')
+data.setCell(1, 2, 'AddToCart.TestSuite_1')
+data.setCell(1, 3, 39266);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Inventory_remove_button')
+data.setCell(2, 2, 'AddToCart.TestSuite_1')
+data.setCell(2, 3, 32775);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'cart_remove_button')
+data.setCell(3, 2, 'AddToCart.TestSuite_1')
+data.setCell(3, 3, 26776);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Reset_App_State')
+data.setCell(4, 2, 'Navigation.TestSuite_1')
+data.setCell(4, 3, 13911);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Navigation_AllItems')
+data.setCell(5, 2, 'Navigation.TestSuite_1')
+data.setCell(5, 3, 11391);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Navigate_Twitter')
+data.setCell(6, 2, 'Navigation.TestSuite_3')
+data.setCell(6, 3, 8239);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Navigation_Close_button')
+data.setCell(7, 2, 'Navigation.TestSuite_1')
+data.setCell(7, 3, 7422);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Navigate_LoginPage')
+data.setCell(8, 2, 'Navigation.TestSuite_2')
+data.setCell(8, 3, 6649);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Navigate_LinkedIN')
+data.setCell(9, 2, 'Navigation.TestSuite_3')
+data.setCell(9, 3, 5000);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'AddingOneItem_to_cart_successfully')
+data.setCell(10, 2, 'AddToCart.TestSuite_1')
+data.setCell(10, 3, 4837);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'AddingItems_to_cart_successfully')
+data.setCell(11, 2, 'AddToCart.TestSuite_1')
+data.setCell(11, 3, 4226);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'Login_without_credentials_close_button')
+data.setCell(12, 2, 'Login.TestSuite_1')
+data.setCell(12, 3, 3412);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'Navigate_Facebook')
+data.setCell(13, 2, 'Navigation.TestSuite_3')
+data.setCell(13, 3, 3343);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'Login_without_credentials')
+data.setCell(14, 2, 'Login.TestSuite_1')
+data.setCell(14, 3, 2972);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'Login_with_wrong_credentials')
+data.setCell(15, 2, 'Login.TestSuite_3')
+data.setCell(15, 3, 2647);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'Login_with_wrong_credentials_close_button')
+data.setCell(16, 2, 'Login.TestSuite_3')
+data.setCell(16, 3, 2523);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'Login_with_correct_credentials')
+data.setCell(17, 2, 'Login.TestSuite_4')
+data.setCell(17, 3, 2129);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'Login_without_username')
+data.setCell(18, 2, 'Login.TestSuite_2')
+data.setCell(18, 3, 2120);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'Login_without_password_close_button')
+data.setCell(19, 2, 'Login.TestSuite_2')
+data.setCell(19, 3, 1945);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'Login_without_password')
+data.setCell(20, 2, 'Login.TestSuite_2')
+data.setCell(20, 3, 1911);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Login.TestSuite_3</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Login_with_wrong_credentials</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login_with_wrong_credentials_close_button</span>
+                <span class="method-start">2649 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Login.TestSuite_2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Login_without_password</span>
+                <span class="method-start">5174 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login_without_password_close_button</span>
+                <span class="method-start">7086 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login_without_username</span>
+                <span class="method-start">9031 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Login.TestSuite_1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Login_without_credentials</span>
+                <span class="method-start">11153 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login_without_credentials_close_button</span>
+                <span class="method-start">14126 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Navigation.TestSuite_3</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Navigate_Facebook</span>
+                <span class="method-start">17539 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Navigate_LinkedIN</span>
+                <span class="method-start">20885 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Navigate_Twitter</span>
+                <span class="method-start">25886 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Navigation.TestSuite_1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Navigate_AboutPage</span>
+                <span class="method-start">34127 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Navigation_AllItems</span>
+                <span class="method-start">93019 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Navigation_Close_button</span>
+                <span class="method-start">104411 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Reset_App_State</span>
+                <span class="method-start">111833 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Navigation.TestSuite_2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Navigate_LoginPage</span>
+                <span class="method-start">125745 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">AddToCart.TestSuite_1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AddingItems_to_cart_successfully</span>
+                <span class="method-start">132395 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingOneItem_to_cart_successfully</span>
+                <span class="method-start">136622 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Inventory_remove_button</span>
+                <span class="method-start">141460 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">cart_continue_shopping_button</span>
+                <span class="method-start">174237 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">cart_remove_button</span>
+                <span class="method-start">213504 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Login.TestSuite_4</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Login_with_correct_credentials</span>
+                <span class="method-start">240282 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

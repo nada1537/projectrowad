@@ -1,0 +1,785 @@
+{
+	"info": {
+		"_postman_id": "598c8be8-b0c0-496d-8b8d-51da0107d358",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29223794",
+		"_collection_link": "https://www.postman.com/crimson-star-813313/workspace/automation-exercise-apis/collection/29223794-598c8be8-b0c0-496d-8b8d-51da0107d358?action=share&source=collection_link&creator=29223794"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Valid register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"Check the message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"User created!\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount?name=Nagham&email=nagham@gmail.com&password=12345@&title=tester&birth_date=15/11/2000&birth_month=11&birth_year=2000&firstname=Nagham&lastname=Abdelrahman&company=Depi&address1=cairo&address2=elshrouk&country=egypt&zipcode=1234&state=egypt&city=cairo&mobile_number=01092933674",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Nagham"
+								},
+								{
+									"key": "email",
+									"value": "nagham@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "12345@"
+								},
+								{
+									"key": "title",
+									"value": "tester"
+								},
+								{
+									"key": "birth_date",
+									"value": "15/11/2000"
+								},
+								{
+									"key": "birth_month",
+									"value": "11"
+								},
+								{
+									"key": "birth_year",
+									"value": "2000"
+								},
+								{
+									"key": "firstname",
+									"value": "Nagham"
+								},
+								{
+									"key": "lastname",
+									"value": "Abdelrahman"
+								},
+								{
+									"key": "company",
+									"value": "Depi"
+								},
+								{
+									"key": "address1",
+									"value": "cairo"
+								},
+								{
+									"key": "address2",
+									"value": "elshrouk"
+								},
+								{
+									"key": "country",
+									"value": "egypt"
+								},
+								{
+									"key": "zipcode",
+									"value": "1234"
+								},
+								{
+									"key": "state",
+									"value": "egypt"
+								},
+								{
+									"key": "city",
+									"value": "cairo"
+								},
+								{
+									"key": "mobile_number",
+									"value": "01092933674"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valid login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Check the token\",function(){\r",
+									"    pm.expect(pm.response.json()).to.have.property(\"token\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/verifyLogin?email=melissarios@gmail.com&password=12345678",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"verifyLogin"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "melissarios@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login without email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Check the error message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"Bad request, email or password parameter is missing in POST request.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/verifyLogin?password=12345",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"verifyLogin"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login with invalid values",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"pm.test(\"Check the message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"User not found!.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/verifyLogin?email=1234&password=1234",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"verifyLogin"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "1234"
+								},
+								{
+									"key": "password",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Check the message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"User updated!\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/updateAccount?name=Nada&email=nada@gmail.com&password=123456789&title=tester&birth_date=15/11/2000&birth_month=11&birth_year=2000&firstname=Nada&lastname=Ahmed&company=Depi&address1=cairo&address2=elshrouk&country=egypt&zipcode=1234&state=egypt&city=cairo&mobile_number=01092933674",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"updateAccount"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Nada"
+								},
+								{
+									"key": "email",
+									"value": "nada@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "title",
+									"value": "tester"
+								},
+								{
+									"key": "birth_date",
+									"value": "15/11/2000"
+								},
+								{
+									"key": "birth_month",
+									"value": "11"
+								},
+								{
+									"key": "birth_year",
+									"value": "2000"
+								},
+								{
+									"key": "firstname",
+									"value": "Nada"
+								},
+								{
+									"key": "lastname",
+									"value": "Ahmed"
+								},
+								{
+									"key": "company",
+									"value": "Depi"
+								},
+								{
+									"key": "address1",
+									"value": "cairo"
+								},
+								{
+									"key": "address2",
+									"value": "elshrouk"
+								},
+								{
+									"key": "country",
+									"value": "egypt"
+								},
+								{
+									"key": "zipcode",
+									"value": "1234"
+								},
+								{
+									"key": "state",
+									"value": "egypt"
+								},
+								{
+									"key": "city",
+									"value": "cairo"
+								},
+								{
+									"key": "mobile_number",
+									"value": "01092933674"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User account details by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Check that property name is exist\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.user).to.have.property(\"name\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/getUserDetailByEmail?email=melissarios@gmail.com",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"getUserDetailByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "melissarios@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brands",
+			"item": [
+				{
+					"name": "Brands List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" var jsonData = pm.response.json();\r",
+									"pm.test(\"Brands list is not empty\", function () {\r",
+									"  \r",
+									"    pm.expect(jsonData.brands.length).to.be.greaterThan(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check that all products have id and brand\", function () {\r",
+									"       jsonData.brands.forEach(function(brand) {\r",
+									"        pm.expect(brand).to.have.property(\"id\");\r",
+									"\t\t    pm.expect(brand).to.have.property(\"brand\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/brandsList",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"brandsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update brands list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(405)\r",
+									"});\r",
+									"pm.test(\"Check the error message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"This request method is not supported.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/brandsList",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"brandsList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Products list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200)\r",
+									"});\r",
+									"/*pm.test(\"Status code is OK\", function () {\r",
+									"    pm.response.to.be.ok\r",
+									"});*/\r",
+									"pm.test(\"Response time is less than 2000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"});\r",
+									"pm.test(\"Check response size\",function(){\r",
+									"    pm.expect(pm.response.responseSize).to.equal(5549)\r",
+									"})\r",
+									" var jsonData = pm.response.json();\r",
+									" pm.test(\"Products list is not empty\", function () {\r",
+									"    pm.expect(jsonData.products.length).to.be.greaterThan(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"First product has 'id', 'name','price','brand' and 'category'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.products[0]).to.have.property(\"id\");\r",
+									"    pm.expect(jsonData.products[0]).to.have.property(\"name\");\r",
+									"    pm.expect(jsonData.products[0]).to.have.property(\"price\");\r",
+									"    pm.expect(jsonData.products[0]).to.have.property(\"brand\");\r",
+									"    pm.expect(jsonData.products[0]).to.have.property(\"category\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check id of product 1\",function(){\r",
+									"    pm.expect(jsonData.products[0].id).to.equal(1)\r",
+									"})\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/productsList",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"productsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post a product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(405)\r",
+									"});\r",
+									"pm.test(\"Check the error message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"This request method is not supported.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/productsList",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"productsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search product with param'",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" var jsonData = pm.response.json();\r",
+									" pm.test(\"Products list is not empty\", function () {\r",
+									"    pm.expect(jsonData.products.length).to.be.greaterThan(0);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/searchProduct?search_product =tshirt",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"searchProduct"
+							],
+							"query": [
+								{
+									"key": "search_product ",
+									"value": "tshirt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search product without param",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Check the error message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"Bad request, search_product parameter is missing in POST request.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/searchProduct",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"searchProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"pm.test(\"Check the error message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"This request method is not supported.\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/verifyLogin",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"verifyLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"Check the message\",function(){\r",
+									"\tpm.expect(pm.response.json().message).to.equal(\"Account deleted!\")\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount?email=nagham@gmail.com&password=12345@",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nagham@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "12345@"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
